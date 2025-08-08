@@ -1,0 +1,665 @@
+/* Base Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  line-height: 1.6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Top Bar */
+.top-bar {
+  background: #fffb00ce;
+  padding: 10px;
+  color: black;
+  text-align: center;
+  font-size: 14px;
+}
+
+.logo-container {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+}
+
+.main-logo {
+  max-width: 180px;
+  height: auto;
+}
+
+/* Optional: Update Navbar Font Style */
+nav a {
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Navigation */
+nav {
+  background: #333;
+  position: relative;
+  padding: 10px 20px;
+  margin-bottom: 100px;
+}
+.mobile-menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 12px;
+  right: 20px;
+}
+.nav-list {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-list li a {
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: white;
+}
+.nav-list li a:hover {
+  background: #444;
+}
+
+/* Hero Section */
+.hero {
+  background: url("images/gear.jpg") center/cover no-repeat;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+.hero-text {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Welcome Section */
+.welcome {
+  padding: 40px 20px;
+  text-align: center;
+  background: #ffffff;
+}
+
+/* Product Gallery Cards */
+.product-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+.product-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 280px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.product-card h3 {
+  margin: 10px 0;
+  color: #ff6600;
+}
+.product-info-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  color: #333;
+  padding: 10px;
+  font-size: 14px;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+.product-card:hover .product-info-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slider Section */
+.products-section {
+  padding: 50px 20px;
+  text-align: center;
+  background: #ffffff;
+}
+.products-section h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #222;
+}
+.slider-container {
+  width: 90%;
+  margin: auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  text-align: center;
+}
+.slider {
+  display: inline-flex;
+  gap: 20px;
+  justify-content: center;
+}
+.slider span {
+  display: inline-block;
+  transition: 0.3s ease;
+}
+.slider img {
+  height: 400px;
+  width: auto;
+  border-radius: 20px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.slider img:hover {
+  transform: scale(1.1) rotate(-2deg);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* === Contact Section Layout === */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 40px 20px;
+  background-color: #ffffff;
+  border-top: 2px solid #eee;
+}
+
+.contact-form {
+  flex: 1 1 45%;
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  color: #333;
+}
+
+.contact-form form input,
+.contact-form form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+}
+
+.contact-form form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-form form button {
+  background: #007bff;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form form button:hover {
+  background: #0056b3;
+}
+
+/* === Address / Map === */
+.contact-info {
+  flex: 1 1 45%;
+}
+
+.contact-info h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.contact-info p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-form, .contact-info {
+    width: 100%;
+  }
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+.footer {
+  background-color: #111;
+  color: #fff;
+  padding: 40px 20px 10px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-logo {
+  flex: 1 1 250px;
+}
+
+.footer-logo h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footer-links,
+.footer-contact {
+  flex: 1 1 200px;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #444;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  margin: 6px 0;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #ccc;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #fff;
+}
+
+.footer-contact p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 14px;
+  color: #aaa;
+  border-top: 1px solid #333;
+}
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  animation: fadeIn 0.3s ease;
+}
+.modal.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-content {
+  background-color: #ffffff;
+  padding: 20px;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+  animation: scaleUp 0.3s ease;
+}
+.modal-content img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.modal-info {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #333;
+}
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes scaleUp {
+  from {transform: scale(0.8);}
+  to {transform: scale(1);}
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: block;
+  }
+  .nav-list {
+    flex-direction: column;
+    align-items: flex-end;
+    display: none;
+  }
+  .nav-list.show {
+    display: flex;
+  }
+  .slider img {
+    height: 250px;
+  }
+}
+/* ✅ WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float img {
+  width: 100%;
+  height: 100%;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.2);
+}
+.contact-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+.contact-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+}
+
+.left-contact, .right-address {
+  flex: 1 1 45%;
+}
+
+.left-contact h2, .right-address h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.left-contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.left-contact input,
+.left-contact textarea {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: none;
+}
+
+.left-contact button {
+  background-color: #d9534f;
+  color: #ffffff;
+  padding: 12px;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.left-contact button:hover {
+  background-color: #c9302c;
+}
+
+.right-address img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.right-address p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+/* Scroll-to-Top Button Styled Like Sahjanand, but Yellow */
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 60px;
+  left: 20px;
+  z-index: 1000;
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+  color: #333;
+  background-color: #ffd700; /* golden yellow */
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #ffca00;
+  transform: translateY(-4px);
+}
+/* Slider Arrows */
+.slider-arrow {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.4);
+  color: white;
+  border: none;
+  font-size: 32px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  transition: background 0.3s ease;
+}
+.slider-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.slider-arrow.left {
+  left: 20px;
+}
+.slider-arrow.right {
+  right: 20px;
+}
+
+/* Slider Dots */
+.slider-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+.slider-dots .dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.slider-dots .dot.active {
+  background-color: #ff6600;
+}
+
+/* Ensure slider scrolls horizontally */
+.slider {
+  display: inline-flex;
+  gap: 20px;
+  min-width: max-content;
+}
+.slider span {
+  flex-shrink: 0;
+}
+/* get direction button*/
+
+.get-directions-button {
+  display: inline-block;
+  padding: 12px 20px;
+  margin-top: 10px;
+  font-size: 16px;
+  color: white;
+  background-color: #007bff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.get-directions-button:hover {
+  background-color: #0056b3;
+}
+
+/* who we are section */
+
+.about-section {
+  text-align: center;
+  padding: 50px 20px;
+  background: #fff;
+}
+
+.about-section h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  border-bottom: 3px solid #0ca4a5;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.about-section p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 18px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.about-info {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.about-block {
+  text-align: center;
+  max-width: 300px;
+}
+
+.about-block img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.about-block p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.about-block strong {
+  font-weight: bold;
+  color: #222;
+}
+
+.about-divider {
+  height: 40px;
+  border-left: 3px solid #c2185b;
+}
